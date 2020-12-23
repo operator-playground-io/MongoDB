@@ -1,0 +1,40 @@
+{
+   "name":"MongoDB Tutorial",
+   "appLayout":"accordion",
+   "appTheme":"g90",
+   "footer":"footer.md",
+   "tutorials":[
+      {
+         "description":"Install Kubernetes Operator",
+         "duration":"15 min",
+         "tutorial_name":"install-Kubernetes-operator.md",
+         "title":"How to Install Kubernetes Operator"
+      },
+      {
+         "description":"How to Deploy MongoDB Resource",
+         "duration":"15 min",
+         "tutorial_name":"deploy-mongodb.md",
+         "title":"How to Deploy MongoDB Resource"
+      },
+      {
+         "description":"How to Deploy Ops Manager Resources",
+         "duration":"10 min",
+         "tutorial_name":"deploy-ops-manager.md",
+         "title":"How to Deploy Ops Manager "
+      },
+      {
+         "description":"Accessing Ops Manager UI (from a browser)",
+         "duration":"10 min",
+         "tutorial_name":"access-ops-manager.md",
+         "title":"How to Access Ops Manager UI (from a browser) "
+      }
+           
+   ],
+   "usefulLinks":[
+      {
+         "title":"MongoDB",
+         "description":"MongoDB ",
+         "url":"https://operatorhub.io/operator/mongodb-enterprise"
+      }
+   ]
+}

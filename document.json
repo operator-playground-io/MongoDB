@@ -1,0 +1,35 @@
+{
+  "name": "MongoDB",
+  "description": "MongoDB",
+  "logo": "_images/SalesStack.png",
+  "has_supporting_content": true,
+  "stack_id": "MongoDB-operator",
+  "type": "stack",
+  "categories": ["Database"],
+  "platform": "Kubernetes",
+  "cover": "cover.md",
+  "meta": {
+    "Database": ["MongoDB"],
+    "Type":[
+         "Operators"
+      ],
+    "Install time": ["5 minutes"]
+  },
+"deployment_information": {
+  "Operator Project": "NA",
+  "Deployment Namespace": "default"
+},
+  "commands": [
+    {
+      "description": "Install Operator",
+      "exec": "kubectl apply -f https://raw.githubusercontent.com/mongodb/mongodb-enterprise-kubernetes/master/mongodb-enterprise.yaml"
+    }
+  ],
+  "display": [
+    {
+      "name": "Developer Dashboard",
+      "url": "##DNS.host##/codeserver",
+      "enabled": true
+    }
+  ]
+}
