@@ -95,7 +95,7 @@ secret/my-credentials created
 
 Execute the following Kubernetes command to verify your secret:
 
-```
+```execute
 kubectl describe secrets/my-credentials -n mongodb
 ```
 

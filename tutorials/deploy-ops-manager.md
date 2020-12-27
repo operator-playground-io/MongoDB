@@ -19,7 +19,7 @@ secret/ops-manager-admin-secret created
 
 ### Create MongoDBOpsManager Resource
 
-
+Create the configuration file ops-manager.yaml for the MongoDBOpsManager resource:
 
 ```execute
 cat <<'EOF' >ops-manager.yaml
@@ -70,6 +70,7 @@ Execute below command to create the object in Kubernetes:
 ```execute
 kubectl apply -f ops-manager.yaml -n mongodb
 ```
+The Operator will first create a Replica Set of specified size (3) which would serve as a backing database for Ops Manager. Then it will create a statefulset for Ops Manager consisting of a single pod running the Ops Manager web server. Finally, the Operator will start another statefulset of size 1 for Ops Manager Backup Daemon and will perform basic configuration for it (provisioning a persistent volume for a HeadDB which is used for backing up MongoDB versions less than 4.2). At this stage, the backup is not configured completely — this will be done in the next steps.
 
 You will see output similar below:
 
@@ -80,19 +81,16 @@ Note, that it takes up to 8 minutes to initialize the Application Database and s
 
 ### Confirm that the Ops Manager resource is running
 
+Make sure the Ops Manager resource gets to the “Running” phase. Wait ~8 minutes to start it the first time:
+
 ```execute
-kubectl get om -o yaml -n mongodb | grep -i status -A 6
+kubectl get om -n mongodb
 ```
 
 You will see output similar below:
 
 ```
-  status:
-    applicationDatabase:
-      lastTransition: "2020-12-23T14:49:49Z"
-      message: Application Database Agents haven't reached Running state yet
-      observedGeneration: 1
-      phase: Pending
-      version: ""
+NAME          REPLICAS   VERSION   STATE (OPSMANAGER)   STATE (APPDB)   STATE (BACKUP)   AGE   WARNINGS
+ops-manager   3          4.4.4                                                           21m   
 ```
 

@@ -44,9 +44,11 @@ clusterrole.rbac.authorization.k8s.io/mongodb-enterprise-operator-mongodb-webhoo
 
 Operator Installation
 
-This operator can also be installed using yaml files, in case you are not using Helm. You may apply the config directly from github clone this repo, and apply the file
+This operator can also be installed using yaml files, in case you are not using Helm. You may apply the config directly from github clone this repo, and apply the file.
 
-```
+Create MongoDB Enterprise Operator with necessary Kubernetes objects: 
+
+```execute
 kubectl apply -f https://raw.githubusercontent.com/mongodb/mongodb-enterprise-kubernetes/master/mongodb-enterprise.yaml
 ```
 
