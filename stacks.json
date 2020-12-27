@@ -17,7 +17,7 @@
   "has_dataset": false,
   "has_api": false,
   "git_url": "https://github.com/operator-playground-io/MongoDB",
-  "git_commit": "a81190faf191c3bd4a36b3639780114825618f2d",
+  "git_commit": "2cd6372145ac9981935de94364d951aa4dcaf21b",
   "installTime": "5 minutes",
   "isStacksSaved": true
 }
