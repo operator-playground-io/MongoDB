@@ -183,13 +183,13 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"mongodb.com/v1","kind":"MongoDB","metadata":{"annotations":{},"name":"my-replica-set","namespace":"mongodb"},"spec":{"credentials":"my-credentials","members":3,"opsManager":{"configMapRef":{"name":"my-project"}},"persistent":false,"podSpec":{"podTemplate":{"spec":{"containers":[{"name":"mongodb-enterprise-database","resources":{"limits":{"cpu":"2","memory":"700M"},"requests":{"cpu":"1","memory":"500M"}}}]}}},"type":"ReplicaSet","version":"4.4.0-ent"}}
-  creationTimestamp: "2020-12-23T14:20:11Z"
+  creationTimestamp: "2020-12-24T14:24:24Z"
   generation: 1
   name: my-replica-set
   namespace: mongodb
-  resourceVersion: "2792048"
+  resourceVersion: "3006968"
   selfLink: /apis/mongodb.com/v1/namespaces/mongodb/mongodb/my-replica-set
-  uid: 0655cfac-1bdb-4f19-b80d-a4cb85f0d306
+  uid: e30b349d-760a-49d8-8a63-20324fe775db
 spec:
   credentials: my-credentials
   members: 3
@@ -211,14 +211,5 @@ spec:
               memory: 500M
   type: ReplicaSet
   version: 4.4.0-ent
-status:
-  lastTransition: "2020-12-23T14:46:56Z"
-  message: 'Failed to prepare Ops Manager connection: Error reading or creating project
-    in Ops Manager: organization with id 5b890e0feacf0b76ff3e7183 not found: Get https://my-ops-manager-or-cloud-manager-url/api/public/v1.0/orgs/5b890e0feacf0b76ff3e7183:
-    dial tcp: lookup my-ops-manager-or-cloud-manager-url on 10.96.0.10:53: no such
-    host'
-  observedGeneration: 1
-  phase: Failed
-  version: ""
 ```
 

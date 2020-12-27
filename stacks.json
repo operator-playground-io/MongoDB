@@ -16,7 +16,7 @@
   "has_support": true,
   "has_dataset": false,
   "has_api": false,
-  "git_url": "https://github.com/operator-playground-io/jenkins-operator.git",
+  "git_url": "https://github.com/operator-playground-io/MongoDB",
   "git_commit": "a81190faf191c3bd4a36b3639780114825618f2d",
   "installTime": "5 minutes",
   "isStacksSaved": true
